@@ -34,9 +34,7 @@ export function Header() {
             Contact
           </a>
           <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/resume"
             className="text-sm font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
           >
             Resume

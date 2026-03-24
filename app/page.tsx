@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
+import { Highlights } from "@/components/highlights";
 import { About } from "@/components/about";
 import { Stack } from "@/components/stack";
 import { Projects } from "@/components/projects";
@@ -17,13 +18,15 @@ export default function Home() {
       </MotionSection>
 
       <MotionSection>
+        <Highlights />
+      </MotionSection>
+
+      <MotionSection>
         <About />
       </MotionSection>
 
       <MotionSection>
-        <MotionSection>
-          <Stack />
-        </MotionSection>
+        <Stack />
       </MotionSection>
 
       <MotionSection>
