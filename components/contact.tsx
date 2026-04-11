@@ -3,7 +3,7 @@ import { HiMail, HiPhone } from "react-icons/hi";
 
 export function Contact() {
   return (
-    <section id="contact" className="px-6 py-24">
+    <section id="contact" className="bg-white px-6 py-24 dark:bg-zinc-950">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-2xl font-semibold">Contact</h2>
         <p className="mt-4 text-zinc-600 dark:text-zinc-400">
@@ -17,17 +17,17 @@ export function Contact() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href="mailto:sarawut.nawawisitkul@gmail.com"
-            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:hover:bg-zinc-900"
           >
-            <HiMail className="h-5 w-5" />
+            <HiMail className="h-5 w-5" aria-hidden="true" />
             Email
           </a>
 
           <a
             href="tel:+66918363922"
-            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:hover:bg-zinc-900"
           >
-            <HiPhone className="h-5 w-5" />
+            <HiPhone className="h-5 w-5" aria-hidden="true" />
             +66 91-836-3922
           </a>
 
@@ -35,9 +35,9 @@ export function Contact() {
             href="https://github.com/mamochiro"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:hover:bg-zinc-900"
           >
-            <SiGithub className="h-5 w-5" />
+            <SiGithub className="h-5 w-5" aria-hidden="true" />
             GitHub
           </a>
 
@@ -45,9 +45,9 @@ export function Contact() {
             href="https://linkedin.com/in/sarawut-nawawisitkul-4431aa181"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-900"
+            className="flex items-center gap-2 rounded-md border border-zinc-300 px-5 py-2 text-sm transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:hover:bg-zinc-900"
           >
-            <SiLinkedin className="h-5 w-5" />
+            <SiLinkedin className="h-5 w-5" aria-hidden="true" />
             LinkedIn
           </a>
         </div>

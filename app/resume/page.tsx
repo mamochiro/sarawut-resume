@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <main className="resume-page mx-auto max-w-[210mm] bg-white px-12 py-10 text-zinc-900 print:px-0 print:py-0">
+    <main className="resume-page mx-auto max-w-[210mm] bg-white px-6 py-10 text-zinc-900 sm:px-12 print:px-0 print:py-0">
       {/* Header */}
       <header className="border-b border-zinc-300 pb-4">
         <h1 className="text-3xl font-bold tracking-tight">

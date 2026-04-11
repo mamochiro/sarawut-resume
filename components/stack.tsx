@@ -26,7 +26,7 @@ type TechItemProps = {
 function TechItem({ name, Icon, detail }: TechItemProps) {
   return (
     <div className="flex items-center gap-3 rounded-md border border-zinc-200 px-4 py-2 text-sm text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900">
-      <Icon className="h-5 w-5 shrink-0" />
+      <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
       <div>
         <span>{name}</span>
         {detail && (
@@ -44,14 +44,6 @@ export function Stack() {
     <section id="stack" className="bg-white px-6 py-24 dark:bg-zinc-950">
       <div className="mx-auto max-w-4xl">
         <h2 className="text-2xl font-semibold">Tech Stack</h2>
-
-        <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
-          My default architecture: Golang with clean architecture for the
-          service layer, PostgreSQL for transactional data, Redis for caching
-          &amp; distributed locking, Kafka for event-driven communication,
-          Elasticsearch for analytical queries — deployed on Kubernetes with
-          ArgoCD and validated with k6 load testing.
-        </p>
 
         <div className="mt-8 space-y-10">
           {/* Languages */}

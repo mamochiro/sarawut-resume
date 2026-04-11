@@ -11,31 +11,31 @@ export function Header() {
         <nav className="flex flex-wrap items-center justify-center gap-4 text-sm sm:justify-end">
           <a
             href="#about"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
           >
             About
           </a>
           <a
             href="#stack"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
           >
             Stack
           </a>
           <a
             href="#projects"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
           >
             Projects
           </a>
           <a
             href="#contact"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
           >
             Contact
           </a>
           <a
             href="/resume"
-            className="text-sm font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+            className="rounded-sm py-2 text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-100"
           >
             Resume
           </a>

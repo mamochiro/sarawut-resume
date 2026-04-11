@@ -1,6 +1,5 @@
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
-import { Highlights } from "@/components/highlights";
 import { About } from "@/components/about";
 import { Stack } from "@/components/stack";
 import { Projects } from "@/components/projects";
@@ -10,15 +9,11 @@ import { MotionSection } from "@/components/motion-section";
 
 export default function Home() {
   return (
-    <div className="min-h-screen font-sans">
+    <main className="min-h-screen font-sans">
       <Header />
 
       <MotionSection>
         <Hero />
-      </MotionSection>
-
-      <MotionSection>
-        <Highlights />
       </MotionSection>
 
       <MotionSection>
@@ -38,6 +33,6 @@ export default function Home() {
       </MotionSection>
 
       <Footer />
-    </div>
+    </main>
   );
 }
