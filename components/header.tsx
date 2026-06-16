@@ -1,47 +1,49 @@
-import { ThemeToggle } from "@/components/theme-toggle";
+"use client";
+
+import { useEffect, useRef } from "react";
 
 export function Header() {
-  return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80">
-      <div className="mx-auto flex max-w-4xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <span className="font-semibold text-zinc-900 dark:text-zinc-100 sm:text-left">
-          Sarawut
-        </span>
+  const navRef = useRef<HTMLElement>(null);
 
-        <nav className="flex flex-wrap items-center justify-center gap-4 text-sm sm:justify-end">
-          <a
-            href="#about"
-            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
-          >
-            About
-          </a>
-          <a
-            href="#stack"
-            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
-          >
-            Stack
-          </a>
-          <a
-            href="#projects"
-            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
-          >
-            Projects
-          </a>
-          <a
-            href="#contact"
-            className="rounded-sm py-2 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:hover:text-zinc-100"
-          >
-            Contact
-          </a>
-          <a
-            href="/resume"
-            className="rounded-sm py-2 text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:text-zinc-400 dark:hover:text-zinc-100"
-          >
-            Resume
-          </a>
-          <ThemeToggle />
-        </nav>
-      </div>
-    </header>
+  useEffect(() => {
+    const nav = navRef.current;
+    if (!nav) return;
+
+    const onScroll = () => {
+      nav.classList.toggle("scrolled", window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Fade-in observer for sections
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) e.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.07, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      observer.disconnect();
+    };
+  }, []);
+
+  return (
+    <nav id="nav" className="portfolio-nav" ref={navRef}>
+      <a className="nav-logo" href="#">SN</a>
+      <ul className="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="/resume" target="_blank" className="nav-resume">Resume ↗</a></li>
+      </ul>
+    </nav>
   );
 }

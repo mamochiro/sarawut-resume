@@ -1,119 +1,96 @@
-import {
-  SiGo,
-  SiElasticsearch,
-  SiApachekafka,
-  SiGitlab,
-} from "react-icons/si";
-
 export function Projects() {
   return (
-    <section id="projects" className="bg-zinc-50 px-6 py-24 dark:bg-zinc-900">
-      <div className="mx-auto max-w-5xl">
-        <h2 className="text-2xl font-semibold">Projects</h2>
-
-        {/* Flagship — Trading Platform */}
-        <div className="mt-8 rounded-lg border border-zinc-200 bg-white p-6 shadow-sm dark:border-zinc-800 dark:bg-zinc-950 sm:p-8">
-          <div className="flex items-center gap-3">
-            <SiGo className="h-6 w-6" aria-hidden="true" />
-            <h3 className="text-lg font-semibold">
-              Trading &amp; Investment Platform
-            </h3>
-          </div>
-          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-500">
-            Robowealth · Finvest, Odini, FinPlus, and Wealth Plus (Kasikorn
-            Bank partnership)
-          </p>
-          <p className="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
-            Core backend for Robowealth&apos;s mutual fund products —
-            financial-grade REST and gRPC APIs processing 200K+
-            transactions/day across four client applications. The Wealth Plus
-            integration with Kasikorn Bank was the largest: 4 cross-functional
-            squads, legacy system data mapping, and k6 load testing to validate
-            KBank-scale traffic.
-          </p>
-          <div className="mt-5 grid gap-x-8 gap-y-3 text-sm text-zinc-600 dark:text-zinc-400 sm:grid-cols-2">
-            <div>
-              <p className="font-medium text-zinc-900 dark:text-zinc-100">
-                What I built
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Golang microservices with clean architecture — API contracts,
-                  data models, service boundaries
-                </li>
-                <li>
-                  Idempotent transaction handling for recurring investments and
-                  portfolio operations
-                </li>
-                <li>
-                  End-to-end mutual fund flow: browsing, orders, DCA, portfolio
-                  management
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-medium text-zinc-900 dark:text-zinc-100">
-                What made it hard
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5">
-                <li>
-                  Integrating with KBank&apos;s legacy systems — contract
-                  negotiation across 4 teams
-                </li>
-                <li>
-                  Performance validation under bank-scale peak traffic with k6
-                </li>
-                <li>
-                  Security testing coordination with the NFT and SQM teams
-                </li>
-              </ul>
-            </div>
-          </div>
+    <section id="projects" className="portfolio-section" style={{ borderTop: "1px solid var(--border)" }}>
+      <div className="section-inner">
+        <div className="section-tag st-lime fade-in">
+          <span className="tag-dot" style={{ background: "oklch(55% 0.22 135)" }} />
+          04 · Projects
         </div>
 
-        {/* Secondary projects */}
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
-          <div className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
-            <SiElasticsearch
-              className="h-5 w-5 text-zinc-400"
-              aria-hidden="true"
-            />
-            <h3 className="mt-3 font-semibold">Fund Data Search</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Elasticsearch &amp; relational schemas for 3,000+ mutual funds
-              with daily NAV history. Reduced ingestion from{" "}
-              <span className="font-medium text-zinc-900 dark:text-zinc-100">
-                10 min to under 1 min
-              </span>
-              .
-            </p>
+        <div className="projects-grid">
+
+          {/* Featured */}
+          <div className="project-card featured pc-purple fade-in">
+            <div className="project-main">
+              <div className="project-num">01 · FEATURED</div>
+              <div className="project-title">Trading &amp; Investment Platform</div>
+              <div className="project-company" style={{ color: "var(--purple)" }}>Robowealth · Finvest, Odini, FinPlus, Wealth Plus</div>
+              <p className="project-desc">
+                Designed and owned the backend for Robowealth&apos;s mutual fund products — financial-grade REST and gRPC APIs with
+                idempotent transaction handling for recurring investments and portfolio operations. The Wealth Plus × Kasikorn Bank
+                integration was the highest-stakes project: mapping API contracts to KBank&apos;s legacy systems, and k6 load testing
+                to validate performance under bank-scale peak traffic before go-live.
+              </p>
+              <div className="project-tags">
+                <span className="tag t-purple">Golang</span>
+                <span className="tag t-default">gRPC</span>
+                <span className="tag t-default">PostgreSQL</span>
+                <span className="tag t-pink">Kafka</span>
+                <span className="tag t-default">k6</span>
+                <span className="tag t-lime">Kubernetes</span>
+              </div>
+            </div>
+            <div className="project-aside">
+              <div className="highlight">200K+ txns / day</div>
+              <div className="highlight">KBank integration</div>
+              <div className="highlight">k6 load validated</div>
+            </div>
           </div>
 
-          <div className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
-            <SiApachekafka
-              className="h-5 w-5 text-zinc-400"
-              aria-hidden="true"
-            />
-            <h3 className="mt-3 font-semibold">Scheduler &amp; Worker Pool</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              Concurrent Golang worker pools with bounded concurrency and
-              back-pressure for time-sensitive financial batch processing.
-              Kafka-driven event workflows.
+          {/* Project 2 */}
+          <div className="project-card pc-cobalt fade-in fade-in-delay-1">
+            <div className="project-num">02</div>
+            <div className="project-title">Fund Search &amp; Data Ingestion</div>
+            <div className="project-company" style={{ color: "var(--cobalt)" }}>Robowealth · Financial Search Infrastructure</div>
+            <p className="project-desc">
+              Designed Elasticsearch indices and relational schemas for 3,000+ mutual funds with daily NAV history.
+              Rewrote the fund data ingestion pipeline, cutting processing time from 10 minutes to under 1 minute —
+              enabling same-day NAV updates across all trading platforms.
             </p>
+            <div className="project-tags">
+              <span className="tag t-cobalt">Elasticsearch</span>
+              <span className="tag t-default">PostgreSQL</span>
+              <span className="tag t-purple">Golang</span>
+            </div>
           </div>
 
-          <div className="rounded-lg border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950">
-            <SiGitlab
-              className="h-5 w-5 text-zinc-400"
-              aria-hidden="true"
-            />
-            <h3 className="mt-3 font-semibold">CI/CD &amp; Reliability</h3>
-            <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-              GitLab CI → ArgoCD → Kubernetes pipelines with k6 load testing
-              baked in. GCP &amp; OpenShift infrastructure with Helm, Traefik,
-              and APISIX.
+          {/* Project 3 */}
+          <div className="project-card pc-lime fade-in fade-in-delay-2">
+            <div className="project-num">03</div>
+            <div className="project-title">Financial Batch Processing Engine</div>
+            <div className="project-company" style={{ color: "oklch(52% 0.22 135)" }}>Robowealth · Distributed Systems</div>
+            <p className="project-desc">
+              Built concurrent Golang worker pools with bounded concurrency and back-pressure for time-sensitive financial jobs —
+              DCA orders, portfolio rebalancing, and statement generation. Kafka-driven workflows with idempotent handlers ensure
+              at-least-once delivery without double-processing transactions.
             </p>
+            <div className="project-tags">
+              <span className="tag t-purple">Golang</span>
+              <span className="tag t-pink">Kafka</span>
+              <span className="tag t-default">Concurrency</span>
+              <span className="tag t-default">Idempotency</span>
+            </div>
           </div>
+
+          {/* Project 4 */}
+          <div className="project-card pc-coral fade-in fade-in-delay-3">
+            <div className="project-num">04</div>
+            <div className="project-title">CI/CD &amp; Delivery Platform</div>
+            <div className="project-company" style={{ color: "var(--coral)" }}>Robowealth · Platform Engineering</div>
+            <p className="project-desc">
+              Established GitLab CI → ArgoCD → Kubernetes delivery pipelines with k6 load testing as a mandatory quality gate
+              before production. GCP and OpenShift infrastructure managed via Helm — with Traefik and APISIX handling routing,
+              rate-limiting, and auth. Zero-downtime rolling releases on every sprint.
+            </p>
+            <div className="project-tags">
+              <span className="tag t-lime">Kubernetes</span>
+              <span className="tag t-default">GitLab CI</span>
+              <span className="tag t-default">ArgoCD</span>
+              <span className="tag t-coral">Traefik</span>
+              <span className="tag t-default">APISIX</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

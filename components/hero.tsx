@@ -1,40 +1,84 @@
 export function Hero() {
   return (
-    <section
-      id="hero"
-      className="flex min-h-screen items-center bg-white px-6 dark:bg-zinc-950"
-    >
-      <div className="mx-auto max-w-4xl py-32">
-        <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
-          Sarawut Nawawisitkul
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-zinc-600 dark:text-zinc-400">
-          Senior Backend Engineer who turns complex financial requirements into
-          reliable, production-grade systems. Focused on clean service
-          boundaries, honest API contracts, and infrastructure you can trust
-          in production.
-        </p>
+    <section id="hero" className="hero-section">
+      <div className="blob blob-1" />
+      <div className="blob blob-2" />
+      <div className="blob blob-3" />
 
-        <p className="mt-4 max-w-2xl text-base text-zinc-600 dark:text-zinc-400">
-          Currently at Robowealth, building the backend behind Finvest, Odini,
-          and FinPlus. Golang-first. Based in Bangkok.
-        </p>
-        <div className="mt-8 flex gap-4">
-          <a
-            href="#projects"
-            className="inline-flex items-center rounded-md border border-zinc-300 px-5 py-2 text-sm font-medium transition hover:bg-zinc-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:border-zinc-700 dark:hover:bg-zinc-900"
-          >
-            View Projects
-          </a>
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-md bg-zinc-900 px-5 py-2 text-sm font-medium text-white transition hover:bg-zinc-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-200"
-          >
-            Download Resume
-          </a>
+      <div className="hero-inner">
+        <div className="hero-text">
+          <div className="hero-badge">
+            <span className="hero-dot" />
+            Available · Bangkok · GMT+7
+          </div>
+
+          <h1 className="hero-name">
+            <span className="line1">Sarawut</span>
+            <span className="line2">Nawawisitkul</span>
+          </h1>
+
+          <div className="hero-meta">
+            <span className="hero-role">Senior Software Engineer</span>
+            <span className="hero-sep">·</span>
+            <span className="hero-location">Backend · Distributed Systems · FinTech</span>
+          </div>
+
+          <p className="hero-tagline">
+            7 years building the FinTech backend infrastructure that processes real money at scale.
+            I architect distributed systems, coordinate across teams, and own delivery from API contract to production.
+          </p>
+
+          <div className="hero-cta">
+            <a href="#projects" className="btn btn-primary">View Projects</a>
+            <a href="/resume" target="_blank" className="btn btn-ghost">Resume ↗</a>
+          </div>
         </div>
+
+        <div className="hero-widget-wrap">
+          <div className="hw-card">
+            <div className="hw-glow" />
+            <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between" }}>
+              <div className="hw-avatar">SN</div>
+              <div className="hw-avail">
+                <span className="hw-dot" />
+                Available
+              </div>
+            </div>
+            <div>
+              <div className="hw-name">Sarawut N.</div>
+              <div className="hw-role">Software Engineer · FinTech</div>
+              <div className="hw-loc">Bangkok, Thailand · GMT+7</div>
+            </div>
+            <div className="hw-divider" />
+            <div className="hw-stats">
+              <div className="hw-stat">
+                <div className="hw-stat-num">7yr</div>
+                <div className="hw-stat-lbl">Experience</div>
+              </div>
+              <div className="hw-stat">
+                <div className="hw-stat-num">15+</div>
+                <div className="hw-stat-lbl">Services</div>
+              </div>
+              <div className="hw-stat">
+                <div className="hw-stat-num">3K+</div>
+                <div className="hw-stat-lbl">Funds</div>
+              </div>
+            </div>
+            <div className="hw-chips">
+              <span className="hw-chip" style={{ color: "#a78bfa", background: "#7c3aed18", borderColor: "#7c3aed35" }}>Go</span>
+              <span className="hw-chip" style={{ color: "#f472b6", background: "#ec489918", borderColor: "#ec489935" }}>Kafka</span>
+              <span className="hw-chip" style={{ color: "#60a5fa", background: "#2563eb18", borderColor: "#2563eb35" }}>K8s</span>
+              <span className="hw-chip" style={{ color: "#4ade80", background: "#16a34a18", borderColor: "#16a34a35" }}>gRPC</span>
+              <span className="hw-chip" style={{ color: "#fb923c", background: "#ea580c18", borderColor: "#ea580c35" }}>GCP</span>
+            </div>
+            <div className="hw-bar" />
+          </div>
+        </div>
+      </div>
+
+      <div className="hero-scroll">
+        <span className="hero-scroll-line" />
+        SCROLL
       </div>
     </section>
   );

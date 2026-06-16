@@ -1,49 +1,101 @@
 export function About() {
   return (
-    <section id="about" className="bg-zinc-50 px-6 py-24 dark:bg-zinc-900">
-      <div className="mx-auto max-w-4xl">
-        <h2 className="text-2xl font-semibold">About Me</h2>
+    <section id="about" className="portfolio-section" style={{ borderTop: "1px solid var(--border)" }}>
+      <div className="section-inner">
+        <div className="section-tag st-purple fade-in">
+          <span className="tag-dot" style={{ background: "var(--purple)" }} />
+          01 · About
+        </div>
 
-        <p className="mt-6 text-zinc-600 dark:text-zinc-400">
-          Most of my career has been in FinTech — the kind where a bug in
-          production means real money moving to the wrong place. That
-          environment shaped how I think about software: correctness first,
-          then performance, then developer experience.
-        </p>
+        <div className="about-grid">
+          <div className="about-text fade-in fade-in-delay-1">
+            <h2 className="about-heading">
+              Backend architect,<br />
+              <span className="grad">systems first.</span>
+            </h2>
+            <p>
+              Most of my career has been in FinTech — the kind where a bug in production means real money moving to the wrong place.
+              That environment shaped how I think about software: correctness first, then performance, then developer experience.
+            </p>
+            <p>
+              At Robowealth I own backend architecture across multiple products and act as a technical bridge between teams —
+              coordinating API contracts, unblocking engineers, and making architectural decisions that touch multiple services at once.
+            </p>
+            <p>
+              Before writing a single line of code, I push for documented API contracts and explicit failure modes.
+              That discipline — more than any tool or framework — is what makes systems maintainable at team scale.
+            </p>
+          </div>
 
-        <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-          At{" "}
-          <span className="font-medium text-zinc-900 dark:text-zinc-100">
-            Robowealth
-          </span>
-          , I&apos;ve been the person teams come to when the API contract
-          doesn&apos;t make sense, the Elasticsearch query is too slow, or
-          nobody can figure out why the fund ingestion pipeline stalls at
-          scale. I like those problems — the ones that sit between &ldquo;it
-          works on my machine&rdquo; and &ldquo;it works under KBank-scale
-          traffic at 9 AM on a trading day.&rdquo;
-        </p>
+          <div className="about-right">
+            <div className="stats fade-in fade-in-delay-2">
+              <div className="stat">
+                <div className="stat-num c-purple">7+</div>
+                <div className="stat-label">Years in backend engineering</div>
+              </div>
+              <div className="stat">
+                <div className="stat-num c-pink">200K+</div>
+                <div className="stat-label">Transactions per day processed</div>
+              </div>
+              <div className="stat">
+                <div className="stat-num c-lime">15+</div>
+                <div className="stat-label">Golang microservices architected</div>
+              </div>
+              <div className="stat">
+                <div className="stat-num c-cobalt">3K+</div>
+                <div className="stat-label">Mutual funds indexed in Elasticsearch</div>
+              </div>
+            </div>
 
-        <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-          I prioritize maintainable architecture — well-defined service
-          boundaries, explicit API contracts, and CI/CD pipelines with clear
-          failure diagnostics. I focus on getting the design right upfront
-          through technical discussions and documentation before writing code.
-        </p>
+            <div className="ab-widgets fade-in fade-in-delay-3">
+              <div className="cb-widget">
+                <div className="cb-label">
+                  <span className="cb-pulse" />
+                  CURRENTLY BUILDING
+                </div>
+                <div className="cb-title">Fund Ingestion<br />Pipeline v3</div>
+                <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+                  <span className="tag t-pink">Kafka</span>
+                  <span className="tag t-purple">Golang</span>
+                  <span className="tag t-lime">Kubernetes</span>
+                </div>
+                <div className="cb-status">
+                  <div className="cb-status-dot" />
+                  In progress
+                </div>
+              </div>
 
-        <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-zinc-500 dark:text-zinc-400">
-          <span>
-            <span className="font-medium text-zinc-900 dark:text-zinc-100">
-              7+ years
-            </span>{" "}
-            in backend engineering
-          </span>
-          <span>
-            <span className="font-medium text-zinc-900 dark:text-zinc-100">
-              B.S. Software Engineering
-            </span>{" "}
-            — Prince of Songkla University
-          </span>
+              <div className="rt-widget">
+                <div className="rt-row" style={{ background: "oklch(58% 0.26 300 / 0.06)", borderColor: "oklch(58% 0.26 300 / 0.15)" }}>
+                  <div className="rt-icon" style={{ background: "oklch(58% 0.26 300 / 0.1)", border: "1px solid oklch(58% 0.26 300 / 0.2)" }}>
+                    <div className="rt-dot" style={{ background: "var(--purple)" }} />
+                  </div>
+                  <div>
+                    <div className="rt-name">Backend Engineer</div>
+                    <div className="rt-sub">Golang · gRPC · Kafka</div>
+                  </div>
+                </div>
+                <div className="rt-row" style={{ background: "oklch(56% 0.24 255 / 0.06)", borderColor: "oklch(56% 0.24 255 / 0.15)" }}>
+                  <div className="rt-icon" style={{ background: "oklch(56% 0.24 255 / 0.1)", border: "1px solid oklch(56% 0.24 255 / 0.2)" }}>
+                    <div className="rt-dot" style={{ background: "var(--cobalt)" }} />
+                  </div>
+                  <div>
+                    <div className="rt-name">Technical Coordinator</div>
+                    <div className="rt-sub">API design · cross-team</div>
+                  </div>
+                </div>
+                <div className="rt-row" style={{ background: "oklch(72% 0.25 135 / 0.06)", borderColor: "oklch(72% 0.25 135 / 0.18)" }}>
+                  <div className="rt-icon" style={{ background: "oklch(72% 0.25 135 / 0.1)", border: "1px solid oklch(72% 0.25 135 / 0.2)" }}>
+                    <div className="rt-dot" style={{ background: "var(--lime)" }} />
+                  </div>
+                  <div>
+                    <div className="rt-name">System Architect</div>
+                    <div className="rt-sub">15+ microservices</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,132 +1,96 @@
-import {
-  SiGo,
-  SiScala,
-  SiJavascript,
-  SiPhp,
-  SiApachekafka,
-  SiPostgresql,
-  SiMysql,
-  SiElasticsearch,
-  SiMongodb,
-  SiRedis,
-  SiDocker,
-  SiKubernetes,
-  SiGooglecloud,
-  SiGitlab,
-  SiGrafana,
-} from "react-icons/si";
-import { FaNetworkWired } from "react-icons/fa";
-
-type TechItemProps = {
-  name: string;
-  Icon: React.ElementType;
-  detail?: string;
-};
-
-function TechItem({ name, Icon, detail }: TechItemProps) {
-  return (
-    <div className="flex items-center gap-3 rounded-md border border-zinc-200 px-4 py-2 text-sm text-zinc-700 transition hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-900">
-      <Icon className="h-5 w-5 shrink-0" aria-hidden="true" />
-      <div>
-        <span>{name}</span>
-        {detail && (
-          <span className="ml-1 text-xs text-zinc-400 dark:text-zinc-500">
-            {detail}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}
-
 export function Stack() {
   return (
-    <section id="stack" className="bg-white px-6 py-24 dark:bg-zinc-950">
-      <div className="mx-auto max-w-4xl">
-        <h2 className="text-2xl font-semibold">Tech Stack</h2>
+    <section id="stack" className="portfolio-section" style={{ borderTop: "1px solid var(--border)" }}>
+      <div className="section-inner">
+        <div className="section-tag st-cobalt fade-in">
+          <span className="tag-dot" style={{ background: "var(--cobalt)" }} />
+          03 · Stack
+        </div>
 
-        <div className="mt-8 space-y-10">
-          {/* Languages */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-900 dark:text-zinc-100">
-              Languages
-            </h3>
-            <div className="flex flex-wrap gap-6">
-              <TechItem
-                name="Golang"
-                Icon={SiGo}
-                detail="· primary · 5+ yrs"
-              />
-              <TechItem name="Scala" Icon={SiScala} detail="· data pipelines" />
-              <TechItem
-                name="JavaScript"
-                Icon={SiJavascript}
-                detail="· tooling"
-              />
-              <TechItem name="PHP" Icon={SiPhp} detail="· legacy systems" />
+        <div className="stack-cloud fade-in fade-in-delay-1">
+          <span className="sc-pill sc-lg t-purple">Golang</span>
+          <span className="sc-pill sc-lg t-pink">Kafka</span>
+          <span className="sc-pill sc-md t-cobalt">Elasticsearch</span>
+          <span className="sc-pill sc-md t-lime">Kubernetes</span>
+          <span className="sc-pill sc-md" style={{ color: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.12)" }}>gRPC</span>
+          <span className="sc-pill sc-sm t-coral">Traefik</span>
+          <span className="sc-pill sc-sm t-gold">Grafana</span>
+          <span className="sc-pill sc-sm" style={{ color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.1)" }}>PostgreSQL</span>
+          <span className="sc-pill sc-sm" style={{ color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.1)" }}>Redis</span>
+          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>ArgoCD</span>
+          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>Helm</span>
+          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>GCP</span>
+          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>Docker</span>
+        </div>
+
+        <div className="stack-list fade-in fade-in-delay-2">
+          <div className="stack-row">
+            <div className="stack-cat">Languages</div>
+            <div className="stack-items">
+              <span className="tag t-purple">Golang</span>
+              <span className="tag t-default">Scala</span>
+              <span className="tag t-default">TypeScript</span>
+              <span className="tag t-default">JavaScript</span>
+              <span className="tag t-default">PHP</span>
             </div>
           </div>
 
-          {/* Backend & Messaging */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-900 dark:text-zinc-100">
-              Backend & API
-            </h3>
-            <div className="flex flex-wrap gap-6">
-              <TechItem name="REST / gRPC / GraphQL" Icon={FaNetworkWired} />
-              <TechItem name="Apache Kafka" Icon={SiApachekafka} />
-              <TechItem
-                name="Microservices"
-                Icon={SiGrafana}
-                detail="· Clean Architecture"
-              />
+          <div className="stack-row">
+            <div className="stack-cat">APIs &amp; Messaging</div>
+            <div className="stack-items">
+              <span className="tag t-pink">Apache Kafka</span>
+              <span className="tag t-default">REST</span>
+              <span className="tag t-default">gRPC</span>
+              <span className="tag t-default">GraphQL</span>
+              <span className="tag t-default">Microservices</span>
+              <span className="tag t-default">Clean Architecture</span>
             </div>
           </div>
 
-          {/* Databases */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-900 dark:text-zinc-100">
-              Databases & Search
-            </h3>
-            <div className="flex flex-wrap gap-6">
-              <TechItem
-                name="PostgreSQL"
-                Icon={SiPostgresql}
-                detail="· primary OLTP"
-              />
-              <TechItem name="MySQL" Icon={SiMysql} />
-              <TechItem
-                name="Elasticsearch"
-                Icon={SiElasticsearch}
-                detail="· financial analytics"
-              />
-              <TechItem name="MongoDB" Icon={SiMongodb} />
-              <TechItem
-                name="Redis"
-                Icon={SiRedis}
-                detail="· cache & locks"
-              />
+          <div className="stack-row">
+            <div className="stack-cat">Databases</div>
+            <div className="stack-items">
+              <span className="tag t-cobalt">PostgreSQL</span>
+              <span className="tag t-cobalt">Elasticsearch</span>
+              <span className="tag t-default">MySQL</span>
+              <span className="tag t-default">MongoDB</span>
+              <span className="tag t-default">Redis</span>
+              <span className="tag t-default">InfluxDB</span>
+              <span className="tag t-default">Oracle</span>
             </div>
           </div>
 
-          {/* Cloud & DevOps */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-zinc-900 dark:text-zinc-100">
-              Cloud & DevOps
-            </h3>
-            <div className="flex flex-wrap gap-6">
-              <TechItem name="Docker / Helm" Icon={SiDocker} />
-              <TechItem name="Kubernetes / OpenShift" Icon={SiKubernetes} />
-              <TechItem name="Google Cloud Platform" Icon={SiGooglecloud} />
-              <TechItem
-                name="GitLab CI / Jenkins / ArgoCD"
-                Icon={SiGitlab}
-              />
-              <TechItem
-                name="k6 / Traefik / APISIX"
-                Icon={SiGrafana}
-                detail="· load testing & gateway"
-              />
+          <div className="stack-row">
+            <div className="stack-cat">DevOps</div>
+            <div className="stack-items">
+              <span className="tag t-lime">Kubernetes</span>
+              <span className="tag t-default">Docker</span>
+              <span className="tag t-default">Helm</span>
+              <span className="tag t-default">GCP</span>
+              <span className="tag t-default">OpenShift</span>
+              <span className="tag t-default">GitLab CI</span>
+              <span className="tag t-default">ArgoCD</span>
+              <span className="tag t-default">Jenkins</span>
+              <span className="tag t-default">Terraform</span>
+            </div>
+          </div>
+
+          <div className="stack-row">
+            <div className="stack-cat">Observability</div>
+            <div className="stack-items">
+              <span className="tag t-gold">Grafana</span>
+              <span className="tag t-default">Prometheus</span>
+              <span className="tag t-default">Jaeger</span>
+              <span className="tag t-default">ELK Stack</span>
+              <span className="tag t-default">k6</span>
+            </div>
+          </div>
+
+          <div className="stack-row">
+            <div className="stack-cat">API Gateway</div>
+            <div className="stack-items">
+              <span className="tag t-coral">Traefik</span>
+              <span className="tag t-default">APISIX</span>
             </div>
           </div>
         </div>
