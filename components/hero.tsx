@@ -65,11 +65,11 @@ export function Hero() {
               </div>
             </div>
             <div className="hw-chips">
-              <span className="hw-chip" style={{ color: "#a78bfa", background: "#7c3aed18", borderColor: "#7c3aed35" }}>Go</span>
-              <span className="hw-chip" style={{ color: "#f472b6", background: "#ec489918", borderColor: "#ec489935" }}>Kafka</span>
-              <span className="hw-chip" style={{ color: "#60a5fa", background: "#2563eb18", borderColor: "#2563eb35" }}>K8s</span>
-              <span className="hw-chip" style={{ color: "#4ade80", background: "#16a34a18", borderColor: "#16a34a35" }}>gRPC</span>
-              <span className="hw-chip" style={{ color: "#fb923c", background: "#ea580c18", borderColor: "#ea580c35" }}>GCP</span>
+              <span className="hw-chip" style={{ color: "var(--purple)", background: "oklch(55% 0.22 296 / 0.10)", borderColor: "oklch(55% 0.22 296 / 0.24)" }}>Go</span>
+              <span className="hw-chip" style={{ color: "var(--pink)",   background: "oklch(60% 0.20 352 / 0.10)", borderColor: "oklch(60% 0.20 352 / 0.24)" }}>Kafka</span>
+              <span className="hw-chip" style={{ color: "var(--cobalt)", background: "oklch(53% 0.16 225 / 0.10)", borderColor: "oklch(53% 0.16 225 / 0.24)" }}>K8s</span>
+              <span className="hw-chip" style={{ color: "var(--lime)",   background: "oklch(55% 0.16 155 / 0.10)", borderColor: "oklch(55% 0.16 155 / 0.24)" }}>gRPC</span>
+              <span className="hw-chip" style={{ color: "var(--coral)",  background: "oklch(60% 0.14 50 / 0.10)",  borderColor: "oklch(60% 0.14 50 / 0.24)" }}>GCP</span>
             </div>
             <div className="hw-bar" />
           </div>

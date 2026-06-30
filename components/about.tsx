@@ -66,8 +66,8 @@ export function About() {
               </div>
 
               <div className="rt-widget">
-                <div className="rt-row" style={{ background: "oklch(58% 0.26 300 / 0.06)", borderColor: "oklch(58% 0.26 300 / 0.15)" }}>
-                  <div className="rt-icon" style={{ background: "oklch(58% 0.26 300 / 0.1)", border: "1px solid oklch(58% 0.26 300 / 0.2)" }}>
+                <div className="rt-row" style={{ background: "oklch(55% 0.22 296 / 0.06)", borderColor: "oklch(55% 0.22 296 / 0.16)" }}>
+                  <div className="rt-icon" style={{ background: "oklch(55% 0.22 296 / 0.10)", border: "1px solid oklch(55% 0.22 296 / 0.22)" }}>
                     <div className="rt-dot" style={{ background: "var(--purple)" }} />
                   </div>
                   <div>
@@ -75,8 +75,8 @@ export function About() {
                     <div className="rt-sub">Golang · gRPC · Kafka</div>
                   </div>
                 </div>
-                <div className="rt-row" style={{ background: "oklch(56% 0.24 255 / 0.06)", borderColor: "oklch(56% 0.24 255 / 0.15)" }}>
-                  <div className="rt-icon" style={{ background: "oklch(56% 0.24 255 / 0.1)", border: "1px solid oklch(56% 0.24 255 / 0.2)" }}>
+                <div className="rt-row" style={{ background: "oklch(53% 0.16 225 / 0.06)", borderColor: "oklch(53% 0.16 225 / 0.16)" }}>
+                  <div className="rt-icon" style={{ background: "oklch(53% 0.16 225 / 0.10)", border: "1px solid oklch(53% 0.16 225 / 0.22)" }}>
                     <div className="rt-dot" style={{ background: "var(--cobalt)" }} />
                   </div>
                   <div>
@@ -84,8 +84,8 @@ export function About() {
                     <div className="rt-sub">API design · cross-team</div>
                   </div>
                 </div>
-                <div className="rt-row" style={{ background: "oklch(72% 0.25 135 / 0.06)", borderColor: "oklch(72% 0.25 135 / 0.18)" }}>
-                  <div className="rt-icon" style={{ background: "oklch(72% 0.25 135 / 0.1)", border: "1px solid oklch(72% 0.25 135 / 0.2)" }}>
+                <div className="rt-row" style={{ background: "oklch(55% 0.16 155 / 0.06)", borderColor: "oklch(55% 0.16 155 / 0.18)" }}>
+                  <div className="rt-icon" style={{ background: "oklch(55% 0.16 155 / 0.10)", border: "1px solid oklch(55% 0.16 155 / 0.22)" }}>
                     <div className="rt-dot" style={{ background: "var(--lime)" }} />
                   </div>
                   <div>

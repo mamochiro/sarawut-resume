@@ -12,15 +12,15 @@ export function Stack() {
           <span className="sc-pill sc-lg t-pink">Kafka</span>
           <span className="sc-pill sc-md t-cobalt">Elasticsearch</span>
           <span className="sc-pill sc-md t-lime">Kubernetes</span>
-          <span className="sc-pill sc-md" style={{ color: "rgba(255,255,255,0.65)", background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.12)" }}>gRPC</span>
+          <span className="sc-pill sc-md t-default">gRPC</span>
           <span className="sc-pill sc-sm t-coral">Traefik</span>
           <span className="sc-pill sc-sm t-gold">Grafana</span>
-          <span className="sc-pill sc-sm" style={{ color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.1)" }}>PostgreSQL</span>
-          <span className="sc-pill sc-sm" style={{ color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.1)" }}>Redis</span>
-          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>ArgoCD</span>
-          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>Helm</span>
-          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>GCP</span>
-          <span className="sc-pill sc-xs" style={{ color: "rgba(255,255,255,0.38)", background: "rgba(255,255,255,0.03)", borderColor: "rgba(255,255,255,0.08)" }}>Docker</span>
+          <span className="sc-pill sc-sm t-default">PostgreSQL</span>
+          <span className="sc-pill sc-sm t-default">Redis</span>
+          <span className="sc-pill sc-xs t-default">ArgoCD</span>
+          <span className="sc-pill sc-xs t-default">Helm</span>
+          <span className="sc-pill sc-xs t-default">GCP</span>
+          <span className="sc-pill sc-xs t-default">Docker</span>
         </div>
 
         <div className="stack-list fade-in fade-in-delay-2">

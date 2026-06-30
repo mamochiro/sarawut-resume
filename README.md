@@ -1,175 +1,119 @@
 # Sarawut Nawawisitkul — Portfolio
 
-Personal portfolio website built with **Next.js (App Router)**, **TypeScript**, and **Tailwind CSS**.  
-This project showcases professional experience, technical skills, and selected work as a **Senior Backend Engineer**.
+Personal portfolio website built with **Next.js 16 (App Router)**, **TypeScript**, and **Tailwind CSS v4**.  
+Showcases professional experience, technical skills, and selected work as a **Senior Backend Engineer**.
 
-🔗 **Live Demo:** _add your deployed URL here_  
-📄 **Resume:** `/resume.pdf`
-
----
-
-## ✨ Features
-
-- ⚡ Built with Next.js App Router
-- 🎨 Tailwind CSS with Dark / Light mode
-- 🌙 Theme toggle powered by `next-themes`
-- 📱 Fully responsive (mobile-first)
-- 🧼 ESLint + Prettier auto-format on save
-- 🚀 SEO-ready metadata
-- 🧠 Hydration-safe components
-- 🧩 Clean, maintainable codebase
+🔗 **Live:** _add your deployed URL here_  
+📄 **Resume:** `/resume`
 
 ---
 
-## 🛠 Tech Stack
+## Design
 
-### Frontend
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-
-### Tooling
-
-- Bun
-- ESLint (Flat Config)
-- Prettier
-
-### Deployment
-
-- Vercel (recommended)
+Gen Z pastel aesthetic — soft lavender, rose, mint, and periwinkle palette across a warm off-white background.  
+Typography: **Plus Jakarta Sans** (headings) + **DM Sans** (body) + **JetBrains Mono** (labels/tags).
 
 ---
 
-## 📂 Project Structure
+## Features
 
-```txt
+- Next.js 16 App Router — all server components by default
+- Tailwind CSS v4 with `@import "tailwindcss"` syntax
+- Custom OKLCH pastel color system via CSS variables
+- Scroll-triggered fade-in animations (IntersectionObserver)
+- Fully responsive — mobile, tablet, desktop (breakpoints: 480 / 768 / 1024px)
+- SEO metadata, Open Graph, and Twitter card
+- `/resume` page with print-to-PDF support
+
+---
+
+## Tech Stack
+
+| Layer | Choice |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 + custom CSS variables |
+| Fonts | Plus Jakarta Sans, DM Sans, JetBrains Mono |
+| Package manager | Bun |
+| Linting | ESLint flat config + Prettier |
+| Deployment | Vercel (recommended) |
+
+---
+
+## Project Structure
+
+```
 app/
-├─ layout.tsx        # Root layout & metadata
-├─ page.tsx          # Main page
-├─ icon.png          # Browser tab icon (favicon)
+├─ layout.tsx          # Root layout, metadata, font imports
+├─ page.tsx            # Single-page composition
+├─ globals.css         # CSS variables (pastel palette) + all component styles
+└─ resume/
+   └─ page.tsx         # Print-friendly resume page
+
 components/
-├─ header.tsx
-├─ hero.tsx
-├─ about.tsx
-├─ stack.tsx
-├─ projects.tsx
-├─ contact.tsx
-├─ footer.tsx
-├─ theme-toggle.tsx
+├─ header.tsx          # Fixed nav with scroll detection (client)
+├─ hero.tsx            # Hero section — name, tagline, widget card
+├─ about.tsx           # Bio, stat cards, role widgets
+├─ highlights.tsx      # Experience timeline
+├─ stack.tsx           # Tech cloud + categorized list
+├─ projects.tsx        # Project cards grid
+├─ contact.tsx         # Contact links
+├─ footer.tsx          # Footer
+├─ motion-section.tsx  # Scroll animation wrapper
+└─ print-button.tsx    # Resume print trigger
+
 public/
-├─ resume.pdf
-.vscode/
-├─ settings.json     # Auto-format on save
+└─ resume.pdf          # Static PDF resume
 ```
 
 ---
 
-## 🚀 Getting Started
-
-### 1️⃣ Install dependencies
+## Getting Started
 
 ```bash
 bun install
+bun dev          # http://localhost:3000
 ```
 
-### 2️⃣ Run development server
+### Other commands
 
 ```bash
-bun dev
-```
-
-Open your browser at:
-
-```
-http://localhost:3000
+bun run build    # Production build
+bun run start    # Serve production build
+bun run format   # Prettier
+bun run lint:fix # ESLint + Prettier fix
 ```
 
 ---
 
-## 🧼 Code Formatting
+## Color System
 
-This project uses **Prettier + ESLint** with auto-format on save.
+All colors are defined as CSS variables in `app/globals.css`:
 
-### Format all files:
+```css
+--purple:  oklch(55% 0.22 296)  /* soft lavender */
+--pink:    oklch(60% 0.20 352)  /* soft rose */
+--lime:    oklch(55% 0.16 155)  /* sage mint */
+--cobalt:  oklch(53% 0.16 225)  /* soft periwinkle */
+--coral:   oklch(60% 0.14 50)   /* soft peach */
+--gold:    oklch(65% 0.13 95)   /* soft lemon */
 
-```bash
-bun run format
+--bg2:  #F5F3FF   /* lavender tint — alt section backgrounds */
+--bg3:  #FFF1F5   /* rose tint */
 ```
 
-### Fix ESLint issues:
-
-```bash
-bun run lint:fix
-```
-
-> VS Code workspace settings are included in `.vscode/settings.json`
+Tag variants (`.t-purple`, `.t-pink`, etc.) and section tags (`.st-purple`, etc.) derive from these variables automatically.
 
 ---
 
-## 🌗 Dark Mode
+## Resume Page
 
-- Implemented using `next-themes`
-- Supports system theme
-- Hydration-safe configuration
-- No server/client mismatch in production
+The `/resume` route renders a print-optimized resume. Use **Ctrl/Cmd + P** → disable headers/footers → save as PDF.
 
 ---
 
-## 📄 Resume
-
-The resume file is located at:
-
-```
-public/resume.pdf
-```
-
-Accessible via:
-
-- Header navigation
-- Direct URL: `/resume.pdf`
-
----
-
-## 🌍 SEO & Metadata
-
-- Metadata defined in `app/layout.tsx`
-- Optimized page title & description
-- Open Graph ready
-- Proper `lang` and accessibility attributes
-
----
-
-## 📦 Production Build
-
-Build and run the project locally in production mode:
-
-```bash
-bun run build
-bun run start
-```
-
----
-
-## 📌 Notes
-
-- Uses Next.js App Router (no Pages Router)
-- No legacy `_document.tsx`
-- No SSR hydration issues
-- Safe handling of client-only logic
-- Clean and readable component structure
-
----
-
-## 📜 License
-
-This project is intended for **personal portfolio use**.
-
----
-
-## 👋 Author
+## Author
 
 **Sarawut Nawawisitkul**  
-Senior Backend Engineer  
-Golang · FinTech · Distributed Systems
+Senior Backend Engineer — Golang · FinTech · Distributed Systems

@@ -3,7 +3,7 @@ export function Projects() {
     <section id="projects" className="portfolio-section" style={{ borderTop: "1px solid var(--border)" }}>
       <div className="section-inner">
         <div className="section-tag st-lime fade-in">
-          <span className="tag-dot" style={{ background: "oklch(55% 0.22 135)" }} />
+          <span className="tag-dot" style={{ background: "var(--lime)" }} />
           04 · Projects
         </div>
 
@@ -58,7 +58,7 @@ export function Projects() {
           <div className="project-card pc-lime fade-in fade-in-delay-2">
             <div className="project-num">03</div>
             <div className="project-title">Financial Batch Processing Engine</div>
-            <div className="project-company" style={{ color: "oklch(52% 0.22 135)" }}>Robowealth · Distributed Systems</div>
+            <div className="project-company" style={{ color: "var(--lime)" }}>Robowealth · Distributed Systems</div>
             <p className="project-desc">
               Built concurrent Golang worker pools with bounded concurrency and back-pressure for time-sensitive financial jobs —
               DCA orders, portfolio rebalancing, and statement generation. Kafka-driven workflows with idempotent handlers ensure
